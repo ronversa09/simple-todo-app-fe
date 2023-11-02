@@ -1,6 +1,6 @@
 import { ITask } from "@/types/tasks";
 
-const baseUrl = 'http://localhost:8000';
+const baseUrl = 'https://simple-todo-app-be.vercel.app/api/api';
 
 export const getAllTodos = async (): Promise<ITask[]> => {
     const res = await fetch(`${baseUrl}/todos`, { cache: 'no-store' });

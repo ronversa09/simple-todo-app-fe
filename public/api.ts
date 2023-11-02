@@ -23,7 +23,7 @@ export const addTodo = async (todo: ITask) : Promise<ITask> => {
 }
 
 export const editTodo = async (todo: ITask) : Promise<ITask> => {
-    const res = await fetch(`${baseUrl}/tasks/edit`, {
+    const res = await fetch(`${baseUrl}/todos/edit`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export const editTodo = async (todo: ITask) : Promise<ITask> => {
 }
 
 export const deleteTodo = async (id: number) : Promise<void> => {
-    await fetch(`${baseUrl}/todos/remove?${id}`, {
+    await fetch(`${baseUrl}/todos/remove/${id}`, {
         method: 'DELETE'
     })
 }
